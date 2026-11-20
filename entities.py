@@ -65,6 +65,8 @@ class Player(pygame.sprite.Sprite):
             self.rect.x -= PLAYER_SPEED
         if keys[pygame.K_RIGHT]:
             self.rect.x += PLAYER_SPEED
+        self.rect.left = max(self.rect.left, 0)
+        self.rect.right = min(self.rect.right, WIDTH)
 
     def shoot(self):
         """플레이어 위쪽 가운데에서 출발하는 총알 하나를 만들어 돌려준다."""
