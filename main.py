@@ -26,7 +26,6 @@ def save_high_score(score):
     """최고 점수를 HIGHSCORE_FILE 에 저장한다."""
     with open(HIGHSCORE_FILE, "w", encoding="utf-8") as f:
         f.write(str(score))
-    pass
 
 
 class Game:
